@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+/* Tipografi: Plus Jakarta Sans (teks) dan Bricolage Grotesque (judul), keduanya Google Fonts */
+@theme {
+  --font-sans: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque Variable", "Plus Jakarta Sans Variable", ui-sans-serif,
+    system-ui, sans-serif;
+}
+
+/* Hormati pengaturan pengguna yang mematikan animasi */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
